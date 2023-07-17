@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "id": "mod-template",
+  "id": "gem-fpscounter",
   "version": "${version}",
-  "name": "mod-template",
+  "name": "gem-fpscounter",
   "description": "",
   "authors": [],
   "contact": {
@@ -17,11 +17,11 @@
     ]
   },
   "mixins": [
-    "mod-template.mixins.json"
+    "gem-fpscounter.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=${loader_version}",
-    "gavinsmod": ">=1.4.5",
+    "gemclient-core": ">=1.0.1",
     "fabric": "*",
     "minecraft": "${minecraft_version}"
   }

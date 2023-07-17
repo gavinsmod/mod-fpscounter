@@ -19,12 +19,14 @@
  */
 package com.peasenet.mods.misc
 
+import com.peasenet.config.FpsColorConfig
 import com.peasenet.gavui.math.BoxF
 import com.peasenet.gavui.math.PointF
 import com.peasenet.gavui.util.GavUISettings
 import com.peasenet.gavui.util.GuiUtil
 import com.peasenet.main.GavinsMod
 import com.peasenet.main.GavinsModClient
+import com.peasenet.main.Settings
 import com.peasenet.mods.Type
 import com.peasenet.settings.SettingBuilder
 import com.peasenet.util.listeners.InGameHudRenderListener
@@ -41,8 +43,12 @@ class ModFpsCounter : MiscMod(
     "gavinsmod.mod.misc.fpscounter",
     "fpscounter",
 ), InGameHudRenderListener {
+    
+    private companion object {
+        lateinit var fpsColorConfig: FpsColorConfig
+    }
     init {
-//        val fpsSetting = SubSetting(100, 10, "gavinsmod.settings.misc.fpscolors")
+        fpsColorConfig = Settings.getConfig<FpsColorConfig>("fpsColors")
         val fpsSetting = SettingBuilder()
             .setWidth(100f)
             .setHeight(10f)

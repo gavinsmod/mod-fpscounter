@@ -1,6 +1,8 @@
 package com.peasenet.mod;
 
+import com.peasenet.config.FpsColorConfig;
 import com.peasenet.main.GavinsMod;
+import com.peasenet.main.Settings;
 import com.peasenet.mods.misc.ModFpsCounter;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
@@ -14,7 +16,9 @@ public class FpsCounterMod implements ModInitializer {
      */
     @Override
     public void onInitialize() {
-        LOGGER.info("Hello Fabric world!");
+        LOGGER.info("Initializing GEM FPS Counter...");
+        Settings.addConfig("fpsColors", new FpsColorConfig());
         GavinsMod.addMod(new ModFpsCounter());
+        LOGGER.info("GEM FPS Counter Initialized!");
     }
 }
