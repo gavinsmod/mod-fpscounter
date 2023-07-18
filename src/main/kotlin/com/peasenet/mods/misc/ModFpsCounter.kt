@@ -27,7 +27,6 @@ import com.peasenet.gavui.util.GuiUtil
 import com.peasenet.main.GavinsMod
 import com.peasenet.main.GavinsModClient
 import com.peasenet.main.Settings
-import com.peasenet.mods.Type
 import com.peasenet.settings.SettingBuilder
 import com.peasenet.util.listeners.InGameHudRenderListener
 import net.minecraft.client.gui.DrawContext
@@ -96,7 +95,7 @@ class ModFpsCounter : MiscMod(
     }
 
     override fun onRenderInGameHud(drawContext: DrawContext, delta: Float) {
-        if (GavinsMod.isEnabled(Type.MOD_GUI) || GavinsMod.isEnabled(Type.SETTINGS) || !isActive) return
+        if (GavinsMod.isEnabled("gui") || GavinsMod.isEnabled("settings") || !isActive) return
         drawFpsOverlay(drawContext)
     }
 
