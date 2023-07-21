@@ -9,16 +9,13 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class FpsCounterMod implements ModInitializer {
-    public static Logger LOGGER = LoggerFactory.getLogger("gavinsmod");
 
     /**
      * Runs the mod initializer.
      */
     @Override
     public void onInitialize() {
-        LOGGER.info("Initializing GEM FPS Counter...");
         Settings.addConfig("fpsColors", new FpsColorConfig());
         GavinsMod.addMod(new ModFpsCounter());
-        LOGGER.info("GEM FPS Counter Initialized!");
     }
 }

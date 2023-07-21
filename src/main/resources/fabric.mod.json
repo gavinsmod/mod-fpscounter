@@ -16,9 +16,6 @@
       "com.peasenet.mod.FpsCounterMod"
     ]
   },
-  "mixins": [
-    "gem-fpscounter.mixins.json"
-  ],
   "depends": {
     "fabricloader": ">=${loader_version}",
     "gemclient-core": ">=1.0.1",
